@@ -12,6 +12,7 @@
 		4FB9A95F21BBF14D00CF1CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB9A95D21BBF14D00CF1CE4 /* Main.storyboard */; };
 		4FB9A96121BBF14F00CF1CE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB9A96021BBF14F00CF1CE4 /* Assets.xcassets */; };
 		4FB9A96421BBF14F00CF1CE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB9A96221BBF14F00CF1CE4 /* LaunchScreen.storyboard */; };
+		4FB9A96E21BBF3F500CF1CE4 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4FB9A96021BBF14F00CF1CE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FB9A96321BBF14F00CF1CE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FB9A96521BBF14F00CF1CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		4FB9A95821BBF14D00CF1CE4 /* DownloadManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4FB9A96B21BBF3C500CF1CE4 /* MyDownloadManger */,
 				4FB9A95921BBF14D00CF1CE4 /* AppDelegate.swift */,
 				4FB9A95B21BBF14D00CF1CE4 /* ViewController.swift */,
 				4FB9A95D21BBF14D00CF1CE4 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				4FB9A96521BBF14F00CF1CE4 /* Info.plist */,
 			);
 			path = DownloadManagerSwift;
+			sourceTree = "<group>";
+		};
+		4FB9A96B21BBF3C500CF1CE4 /* MyDownloadManger */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */,
+			);
+			path = MyDownloadManger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				4FB9A95C21BBF14D00CF1CE4 /* ViewController.swift in Sources */,
 				4FB9A95A21BBF14D00CF1CE4 /* AppDelegate.swift in Sources */,
+				4FB9A96E21BBF3F500CF1CE4 /* Downloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
