@@ -6,15 +6,27 @@
 //  Copyright © 2018 Salem Mohammed. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Cacher {
     
-    private let cache = NSCache<NSString, NSData>()
+    fileprivate let cache = NSCache<NSString, NSData>()
+    fileprivate var memoryWarningObserver: NSObjectProtocol!
     
     static let sharedInstance = Cacher()
     
     private init() {
+        memoryWarningObserver = NotificationCenter.default.addObserver(forName: UIApplication.didReceiveMemoryWarningNotification, object: nil, queue: nil) { [weak self] notification in
+            self?.cache.removeAllObjects()
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(memoryWarningObserver)
+    }
+    
+    func updateCacheLimit(toLimit limit: Int) {
+        cache.countLimit = limit
     }
     
     func fileData(forKey key: String) -> NSData? {
