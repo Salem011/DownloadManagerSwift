@@ -14,6 +14,7 @@
 		4FB9A96421BBF14F00CF1CE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB9A96221BBF14F00CF1CE4 /* LaunchScreen.storyboard */; };
 		4FB9A96E21BBF3F500CF1CE4 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */; };
 		4FB9A97021BBF89100CF1CE4 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A96F21BBF89100CF1CE4 /* Cacher.swift */; };
+		4FB9A97221BBFA4400CF1CE4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A97121BBFA4400CF1CE4 /* DownloadManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4FB9A96521BBF14F00CF1CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		4FB9A96F21BBF89100CF1CE4 /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
+		4FB9A97121BBFA4400CF1CE4 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */,
 				4FB9A96F21BBF89100CF1CE4 /* Cacher.swift */,
+				4FB9A97121BBFA4400CF1CE4 /* DownloadManager.swift */,
 			);
 			path = MyDownloadManger;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB9A95C21BBF14D00CF1CE4 /* ViewController.swift in Sources */,
+				4FB9A97221BBFA4400CF1CE4 /* DownloadManager.swift in Sources */,
 				4FB9A97021BBF89100CF1CE4 /* Cacher.swift in Sources */,
 				4FB9A95A21BBF14D00CF1CE4 /* AppDelegate.swift in Sources */,
 				4FB9A96E21BBF3F500CF1CE4 /* Downloader.swift in Sources */,
