@@ -15,7 +15,19 @@
 		4FB9A96E21BBF3F500CF1CE4 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */; };
 		4FB9A97021BBF89100CF1CE4 /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A96F21BBF89100CF1CE4 /* Cacher.swift */; };
 		4FB9A97221BBFA4400CF1CE4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A97121BBFA4400CF1CE4 /* DownloadManager.swift */; };
+		4FB9A97A21BEB98000CF1CE4 /* DownloadManagerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A97921BEB98000CF1CE4 /* DownloadManagerSwiftTests.swift */; };
+		4FB9A98221BEB9A700CF1CE4 /* CacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A98121BEB9A700CF1CE4 /* CacherTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FB9A97C21BEB98000CF1CE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FB9A94E21BBF14D00CF1CE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FB9A95521BBF14D00CF1CE4;
+			remoteInfo = DownloadManagerSwift;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4FB9A95621BBF14D00CF1CE4 /* DownloadManagerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadManagerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +40,21 @@
 		4FB9A96D21BBF3F500CF1CE4 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		4FB9A96F21BBF89100CF1CE4 /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		4FB9A97121BBFA4400CF1CE4 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		4FB9A97721BEB97F00CF1CE4 /* DownloadManagerSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DownloadManagerSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB9A97921BEB98000CF1CE4 /* DownloadManagerSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerSwiftTests.swift; sourceTree = "<group>"; };
+		4FB9A97B21BEB98000CF1CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FB9A98121BEB9A700CF1CE4 /* CacherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4FB9A95321BBF14D00CF1CE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB9A97421BEB97F00CF1CE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB9A95821BBF14D00CF1CE4 /* DownloadManagerSwift */,
+				4FB9A97821BEB98000CF1CE4 /* DownloadManagerSwiftTests */,
 				4FB9A95721BBF14D00CF1CE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB9A95621BBF14D00CF1CE4 /* DownloadManagerSwift.app */,
+				4FB9A97721BEB97F00CF1CE4 /* DownloadManagerSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +106,16 @@
 			path = MyDownloadManger;
 			sourceTree = "<group>";
 		};
+		4FB9A97821BEB98000CF1CE4 /* DownloadManagerSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9A97921BEB98000CF1CE4 /* DownloadManagerSwiftTests.swift */,
+				4FB9A98121BEB9A700CF1CE4 /* CacherTests.swift */,
+				4FB9A97B21BEB98000CF1CE4 /* Info.plist */,
+			);
+			path = DownloadManagerSwiftTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +136,24 @@
 			productReference = 4FB9A95621BBF14D00CF1CE4 /* DownloadManagerSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4FB9A97621BEB97F00CF1CE4 /* DownloadManagerSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FB9A97E21BEB98000CF1CE4 /* Build configuration list for PBXNativeTarget "DownloadManagerSwiftTests" */;
+			buildPhases = (
+				4FB9A97321BEB97F00CF1CE4 /* Sources */,
+				4FB9A97421BEB97F00CF1CE4 /* Frameworks */,
+				4FB9A97521BEB97F00CF1CE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FB9A97D21BEB98000CF1CE4 /* PBXTargetDependency */,
+			);
+			name = DownloadManagerSwiftTests;
+			productName = DownloadManagerSwiftTests;
+			productReference = 4FB9A97721BEB97F00CF1CE4 /* DownloadManagerSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -113,6 +166,10 @@
 				TargetAttributes = {
 					4FB9A95521BBF14D00CF1CE4 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					4FB9A97621BEB97F00CF1CE4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 4FB9A95521BBF14D00CF1CE4;
 					};
 				};
 			};
@@ -130,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				4FB9A95521BBF14D00CF1CE4 /* DownloadManagerSwift */,
+				4FB9A97621BEB97F00CF1CE4 /* DownloadManagerSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +200,13 @@
 				4FB9A96421BBF14F00CF1CE4 /* LaunchScreen.storyboard in Resources */,
 				4FB9A96121BBF14F00CF1CE4 /* Assets.xcassets in Resources */,
 				4FB9A95F21BBF14D00CF1CE4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB9A97521BEB97F00CF1CE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +225,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FB9A97321BEB97F00CF1CE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB9A97A21BEB98000CF1CE4 /* DownloadManagerSwiftTests.swift in Sources */,
+				4FB9A98221BEB9A700CF1CE4 /* CacherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FB9A97D21BEB98000CF1CE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FB9A95521BBF14D00CF1CE4 /* DownloadManagerSwift */;
+			targetProxy = 4FB9A97C21BEB98000CF1CE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FB9A95D21BBF14D00CF1CE4 /* Main.storyboard */ = {
@@ -334,6 +416,46 @@
 			};
 			name = Release;
 		};
+		4FB9A97F21BEB98000CF1CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UXYD2AG48K;
+				INFOPLIST_FILE = DownloadManagerSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salem..DownloadManagerSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadManagerSwift.app/DownloadManagerSwift";
+			};
+			name = Debug;
+		};
+		4FB9A98021BEB98000CF1CE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UXYD2AG48K;
+				INFOPLIST_FILE = DownloadManagerSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salem..DownloadManagerSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadManagerSwift.app/DownloadManagerSwift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +473,15 @@
 			buildConfigurations = (
 				4FB9A96921BBF14F00CF1CE4 /* Debug */,
 				4FB9A96A21BBF14F00CF1CE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FB9A97E21BEB98000CF1CE4 /* Build configuration list for PBXNativeTarget "DownloadManagerSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FB9A97F21BEB98000CF1CE4 /* Debug */,
+				4FB9A98021BEB98000CF1CE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

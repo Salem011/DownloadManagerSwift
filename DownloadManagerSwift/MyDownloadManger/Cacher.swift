@@ -27,6 +27,7 @@ class Cacher {
     
     func updateCacheLimit(toLimit limit: Int) {
         cache.countLimit = limit
+        cache.totalCostLimit = 2
     }
     
     func fileData(forKey key: String) -> NSData? {
@@ -36,5 +37,11 @@ class Cacher {
     func save(fileData: NSData, forKey key: String) {
         cache.setObject(fileData, forKey: key as NSString)
     }
+        
+    func removeFileData(forKey key: String) {
+        cache.removeObject(forKey: key as NSString)
+    }
+    
+    
     
 }
