@@ -1,5 +1,5 @@
 //
-//  FileWrapper.swift
+//  DownloadedFileWrapper.swift
 //  DownloadManagerSwift
 //
 //  Created by Salem Mohamed on 11/12/2018.
