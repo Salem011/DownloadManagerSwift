@@ -12,7 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        DownloadManager.loadFile(fromUrl: "http://pastebin.com/raw/wgkJgazE", fileWrapper: JsonWrapper()) { (json, error) in
+            print(error)
+            print(json)
+        }
+        
+//        DownloadManager.loadJson(fromUrl: "http://pastebin.com/raw/wgkJgazE") { (json, error) in
+//            print(error)
+//            print(json)
+//        }
     }
 
 

@@ -27,7 +27,6 @@ class Cacher {
     
     func updateCacheLimit(toLimit limit: Int) {
         cache.countLimit = limit
-        cache.totalCostLimit = 2
     }
     
     func fileData(forKey key: String) -> NSData? {

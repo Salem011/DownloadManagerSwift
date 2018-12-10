@@ -11,18 +11,23 @@ import XCTest
 
 class DownloadManagerSwiftTests: XCTestCase {
     
+    var imageWrapper: ImageWrapper!
+    
     override func setUp() {
+        imageWrapper = ImageWrapper()
     }
 
     override func tearDown() {
         Cacher.sharedInstance.updateCacheLimit(toLimit: 0)
+        imageWrapper = nil
     }
 
     func testDownloadAndCache() {
         let imageUrl = "https://www.gettyimages.com/gi-resources/images/Embed/new/embed2.jpg"
         let promise = expectation(description: "Image is downloaded and cached")
 
-        DownloadManager.loadImage(fromUrl: imageUrl) { (image, error) in
+        DownloadManager.loadFile(fromUrl: imageUrl, fileWrapper: imageWrapper) { (file, error) in
+            let image = file as? UIImage
             
             if image != nil {
                 // Assert caching the image data
@@ -40,11 +45,14 @@ class DownloadManagerSwiftTests: XCTestCase {
         let smallImageUrl = "https://www.gettyimages.com/gi-resources/images/Embed/new/embed2.jpg"
         let largeImageUrl = "https://wallpaperbrowse.com/media/images/3848765-wallpaper-images-download.jpg"
    
+        // Update the cache limit to 1 object only
         Cacher.sharedInstance.updateCacheLimit(toLimit: 1)
         
         let promise = expectation(description: "Only 1 image is cached")
         
-        DownloadManager.loadImage(fromUrl: smallImageUrl) { (image, error) in
+        // Download the small image
+        DownloadManager.loadFile(fromUrl: smallImageUrl, fileWrapper: imageWrapper) { (file, error) in
+            let image = file as? UIImage
             
             guard image != nil else {
                 XCTFail("Failed with error: \(String(describing: error?.localizedDescription))")
@@ -55,7 +63,9 @@ class DownloadManagerSwiftTests: XCTestCase {
             XCTAssertNotNil(Cacher.sharedInstance.fileData(forKey: smallImageUrl))
         }
         
-        DownloadManager.loadImage(fromUrl: largeImageUrl) { (largeImage, error) in
+        // Download the large image
+        DownloadManager.loadFile(fromUrl: largeImageUrl, fileWrapper: imageWrapper) { (file, error) in
+            let largeImage = file as? UIImage
             guard largeImage != nil else {
                 XCTFail("Failed with error: \(String(describing: error?.localizedDescription))")
                 return
@@ -66,7 +76,7 @@ class DownloadManagerSwiftTests: XCTestCase {
             promise.fulfill()
         }
 
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 8, handler: nil)
     }
 
 }
