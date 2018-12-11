@@ -20,6 +20,7 @@
 		4FB9A98421BEDCEF00CF1CE4 /* DownloadedFileWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A98321BEDCEF00CF1CE4 /* DownloadedFileWrapper.swift */; };
 		4FB9A98621BEE9AA00CF1CE4 /* BoardComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A98521BEE9AA00CF1CE4 /* BoardComponentCell.swift */; };
 		4FB9A98B21BEEA8800CF1CE4 /* BoardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A98A21BEEA8800CF1CE4 /* BoardComponent.swift */; };
+		4FB9A98D21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		4FB9A98321BEDCEF00CF1CE4 /* DownloadedFileWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedFileWrapper.swift; sourceTree = "<group>"; };
 		4FB9A98521BEE9AA00CF1CE4 /* BoardComponentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComponentCell.swift; sourceTree = "<group>"; };
 		4FB9A98A21BEEA8800CF1CE4 /* BoardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComponent.swift; sourceTree = "<group>"; };
+		4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionCustomLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				4FB9A95B21BBF14D00CF1CE4 /* BoardViewController.swift */,
 				4FB9A98521BEE9AA00CF1CE4 /* BoardComponentCell.swift */,
+				4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB9A95C21BBF14D00CF1CE4 /* BoardViewController.swift in Sources */,
+				4FB9A98D21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift in Sources */,
 				4FB9A97221BBFA4400CF1CE4 /* DownloadManager.swift in Sources */,
 				4FB9A98B21BEEA8800CF1CE4 /* BoardComponent.swift in Sources */,
 				4FB9A97021BBF89100CF1CE4 /* Cacher.swift in Sources */,
