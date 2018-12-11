@@ -13,14 +13,14 @@ public class DownloadManager {
     /*
      Update the caching capacity limit
      */
-    static func updateCachingLimit(toLimit limit: Int) {
+    public static func updateCachingLimit(toLimit limit: Int) {
         Cacher.sharedInstance.updateCacheLimit(toLimit: limit)
     }
     
     /*
       loading the file using the urlString from cache or download it if it is not cached and convert Data object to the file using the fileWrapper param.
      */
-    static func loadFile (fromUrl urlString: String, fileWrapper: DownloadedFileWrapper, completion: @escaping (_ file: Any?, _ error: Error?) -> ()) {
+    public static func loadFile (fromUrl urlString: String, fileWrapper: DownloadedFileWrapper, completion: @escaping (_ file: Any?, _ error: Error?) -> ()) {
      
         guard let url = URL(string: urlString) else {
             let invalidError = NSError(domain: "", code: 0, userInfo: nil)

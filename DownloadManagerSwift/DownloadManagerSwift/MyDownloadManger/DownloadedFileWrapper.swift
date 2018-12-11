@@ -8,12 +8,15 @@
 
 import UIKit
 
-public protocol DownloadedFileWrapper {
+public protocol DownloadedFileWrapper: class {
     func convertToFile(fromData data: Data) -> Any?
 }
 
 
 public class ImageWrapper: DownloadedFileWrapper {
+    
+    public init() {
+    }
     
     public func convertToFile(fromData data: Data) -> Any? {
         return UIImage(data: data)
@@ -22,6 +25,9 @@ public class ImageWrapper: DownloadedFileWrapper {
 
 
 public class JsonWrapper: DownloadedFileWrapper {
+    
+    public init() {
+    }
     
     public func convertToFile(fromData data: Data) -> Any? {
         do {

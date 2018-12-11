@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DownloadManagerSwift
 
 class BoardViewController: UIViewController {
 
