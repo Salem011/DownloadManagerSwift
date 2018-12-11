@@ -25,3 +25,8 @@ Example:
 
 
 Please have a look at DownloadManagerSwiftExample project for more usage examples.
+
+- Example is written in MVC
+- Example Project is using the DownloadManagerSwift to download the json and the images.
+- Example is only one screen which is a collection view that displays images with different height sizes.
+
