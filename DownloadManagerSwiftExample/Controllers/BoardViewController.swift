@@ -16,7 +16,6 @@ class BoardViewController: UIViewController {
     var components = [BoardComponent]()
     let apiService = BoardAPIService()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         boardCollectionView.dataSource = self
@@ -31,7 +30,9 @@ class BoardViewController: UIViewController {
     func retrieveBoardComponents () {
         apiService.loadBoardComponents { (boardComponents, error) in
             if let errorMessage = error?.localizedDescription {
-                // TODO: Display an alert with the error
+                DispatchQueue.main.async {
+                    self.displayErrorAlert(withMessage: errorMessage)
+                }
                 return
             }
             
@@ -40,6 +41,12 @@ class BoardViewController: UIViewController {
                 self.boardCollectionView.reloadData()
             }
         }
+    }
+    
+    func displayErrorAlert(withMessage message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }

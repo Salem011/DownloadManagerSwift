@@ -18,6 +18,7 @@
 		4FB9A9D121BF8FCF00CF1CE4 /* DownloadManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB9A9CF21BF8FC900CF1CE4 /* DownloadManagerSwift.framework */; };
 		4FB9A9D221BF8FCF00CF1CE4 /* DownloadManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB9A9CF21BF8FC900CF1CE4 /* DownloadManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4FB9A9D521BF93A000CF1CE4 /* BoardAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A9D421BF93A000CF1CE4 /* BoardAPIService.swift */; };
+		4FB9A9DB21BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A9D921BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,9 @@
 		4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionCustomLayout.swift; sourceTree = "<group>"; };
 		4FB9A9CF21BF8FC900CF1CE4 /* DownloadManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DownloadManagerSwift.framework; sourceTree = "<group>"; };
 		4FB9A9D421BF93A000CF1CE4 /* BoardAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAPIService.swift; sourceTree = "<group>"; };
+		4FB9A9D821BF9EB500CF1CE4 /* DownloadManagerSwiftExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadManagerSwiftExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		4FB9A9D921BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+InfiniteScroll.m"; sourceTree = "<group>"; };
+		4FB9A9DA21BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+InfiniteScroll.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		4FB9A95821BBF14D00CF1CE4 /* DownloadManagerSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				4FB9A9D621BF9E7800CF1CE4 /* Libs */,
 				4FB9A9D321BF938500CF1CE4 /* Services */,
 				4FB9A98E21BF6CC800CF1CE4 /* Controllers */,
 				4FB9A98921BEEA6C00CF1CE4 /* Models */,
@@ -90,6 +95,7 @@
 				4FB9A96021BBF14F00CF1CE4 /* Assets.xcassets */,
 				4FB9A96221BBF14F00CF1CE4 /* LaunchScreen.storyboard */,
 				4FB9A96521BBF14F00CF1CE4 /* Info.plist */,
+				4FB9A9D821BF9EB500CF1CE4 /* DownloadManagerSwiftExample-Bridging-Header.h */,
 			);
 			path = DownloadManagerSwiftExample;
 			sourceTree = "<group>";
@@ -127,6 +133,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		4FB9A9D621BF9E7800CF1CE4 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9A9D721BF9E8500CF1CE4 /* UIScrollView+InfiniteScroll */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		4FB9A9D721BF9E8500CF1CE4 /* UIScrollView+InfiniteScroll */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9A9DA21BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.h */,
+				4FB9A9D921BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.m */,
+			);
+			path = "UIScrollView+InfiniteScroll";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +183,7 @@
 				TargetAttributes = {
 					4FB9A95521BBF14D00CF1CE4 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -199,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB9A9DB21BF9EB600CF1CE4 /* UIScrollView+InfiniteScroll.m in Sources */,
 				4FB9A95C21BBF14D00CF1CE4 /* BoardViewController.swift in Sources */,
 				4FB9A98D21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift in Sources */,
 				4FB9A98B21BEEA8800CF1CE4 /* BoardComponent.swift in Sources */,
@@ -350,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UXYD2AG48K;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -364,6 +390,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salem.DownloadManagerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DownloadManagerSwiftExample/DownloadManagerSwiftExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UXYD2AG48K;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -387,6 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salem.DownloadManagerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DownloadManagerSwiftExample/DownloadManagerSwiftExample-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
