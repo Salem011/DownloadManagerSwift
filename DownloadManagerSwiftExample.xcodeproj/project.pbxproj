@@ -17,6 +17,7 @@
 		4FB9A98D21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */; };
 		4FB9A9D121BF8FCF00CF1CE4 /* DownloadManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB9A9CF21BF8FC900CF1CE4 /* DownloadManagerSwift.framework */; };
 		4FB9A9D221BF8FCF00CF1CE4 /* DownloadManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB9A9CF21BF8FC900CF1CE4 /* DownloadManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4FB9A9D521BF93A000CF1CE4 /* BoardAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9A9D421BF93A000CF1CE4 /* BoardAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		4FB9A98A21BEEA8800CF1CE4 /* BoardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardComponent.swift; sourceTree = "<group>"; };
 		4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionCustomLayout.swift; sourceTree = "<group>"; };
 		4FB9A9CF21BF8FC900CF1CE4 /* DownloadManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DownloadManagerSwift.framework; sourceTree = "<group>"; };
+		4FB9A9D421BF93A000CF1CE4 /* BoardAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,9 @@
 		4FB9A95821BBF14D00CF1CE4 /* DownloadManagerSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				4FB9A98E21BF6CC800CF1CE4 /* Controller */,
-				4FB9A98921BEEA6C00CF1CE4 /* Model */,
+				4FB9A9D321BF938500CF1CE4 /* Services */,
+				4FB9A98E21BF6CC800CF1CE4 /* Controllers */,
+				4FB9A98921BEEA6C00CF1CE4 /* Models */,
 				4FB9A98721BEEA5E00CF1CE4 /* Views */,
 				4FB9A95921BBF14D00CF1CE4 /* AppDelegate.swift */,
 				4FB9A95D21BBF14D00CF1CE4 /* Main.storyboard */,
@@ -100,20 +103,28 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4FB9A98921BEEA6C00CF1CE4 /* Model */ = {
+		4FB9A98921BEEA6C00CF1CE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4FB9A98A21BEEA8800CF1CE4 /* BoardComponent.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		4FB9A98E21BF6CC800CF1CE4 /* Controller */ = {
+		4FB9A98E21BF6CC800CF1CE4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4FB9A95B21BBF14D00CF1CE4 /* BoardViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4FB9A9D321BF938500CF1CE4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9A9D421BF93A000CF1CE4 /* BoardAPIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				4FB9A95C21BBF14D00CF1CE4 /* BoardViewController.swift in Sources */,
 				4FB9A98D21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift in Sources */,
 				4FB9A98B21BEEA8800CF1CE4 /* BoardComponent.swift in Sources */,
+				4FB9A9D521BF93A000CF1CE4 /* BoardAPIService.swift in Sources */,
 				4FB9A95A21BBF14D00CF1CE4 /* AppDelegate.swift in Sources */,
 				4FB9A98621BEE9AA00CF1CE4 /* BoardComponentCell.swift in Sources */,
 			);

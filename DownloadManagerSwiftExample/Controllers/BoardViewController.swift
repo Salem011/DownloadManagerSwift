@@ -14,6 +14,8 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var boardCollectionView: UICollectionView!
     
     var components = [BoardComponent]()
+    let apiService = BoardAPIService()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +29,18 @@ class BoardViewController: UIViewController {
     
     // MARK: - View Support Functions
     func retrieveBoardComponents () {
-        DownloadManager.loadFile(fromUrl: "http://pastebin.com/raw/wgkJgazE", fileWrapper: JsonWrapper()) { (json, error) in
-            guard let jsonArray = json as? NSArray else {
+        apiService.loadBoardComponents { (boardComponents, error) in
+            if let errorMessage = error?.localizedDescription {
+                // TODO: Display an alert with the error
                 return
             }
             
-            for jsonElement in jsonArray {
-                if let componentJson = jsonElement as? [String: Any] {
-                    self.components.append(BoardComponent(fromJson: componentJson))
-                }
-            }
-            // Data is parsed, reload and display
+            self.components = boardComponents
             DispatchQueue.main.async {
                 self.boardCollectionView.reloadData()
             }
         }
     }
-
 
 }
 
@@ -74,11 +71,11 @@ extension BoardViewController: UICollectionViewDataSource {
                 cell.componentImageView.image = image
             }
         }
-        
         return cell
     }
     
 }
+
 
 extension BoardViewController: BoardCollectionCustomLayoutDelegate {
     
