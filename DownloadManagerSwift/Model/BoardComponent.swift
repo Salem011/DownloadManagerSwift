@@ -6,14 +6,14 @@
 //  Copyright © 2018 Salem Mohammed. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class BoardComponent {
     
     var id: String
     var imageUrl: String
-    var width: Int
-    var height: Int
+    var width: CGFloat
+    var height: CGFloat
     
     init(fromJson json: [String: Any]){
         id = json["id"] as? String ?? ""
@@ -23,8 +23,8 @@ class BoardComponent {
             imageUrl = url
         }
         
-        width = json["width"] as? Int ?? 0
-        height = json["height"] as? Int ?? 0
+        width = json["width"] as? CGFloat ?? 0
+        height = json["height"] as? CGFloat ?? 0
     }
     
     
