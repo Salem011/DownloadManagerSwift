@@ -54,11 +54,18 @@ extension BoardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = boardCollectionView.dequeueReusableCell(withReuseIdentifier: "BoardComponentCell", for: indexPath) as! BoardComponentCell
         
-        // TODO: Add a placeholder
-        cell.componentImageView.image = nil
+        cell.componentImageView.image = UIImage(named: "placeholder")
         
+        cell.showIndicator()
         DownloadManager.loadFile(fromUrl: components[indexPath.row].imageUrl, fileWrapper: ImageWrapper()) { (file, error) in
-            let image = file as? UIImage
+            DispatchQueue.main.async {
+                cell.hideIndicator()
+            }
+            
+            guard let image = file as? UIImage else {
+                return
+            }
+            
             DispatchQueue.main.async {
                 cell.componentImageView.image = image
             }
