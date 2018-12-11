@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BoardComponent {
+struct BoardComponent {
     
     var id: String
     var imageUrl: String

@@ -93,6 +93,7 @@
 		4FB9A95821BBF14D00CF1CE4 /* DownloadManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4FB9A98E21BF6CC800CF1CE4 /* Controller */,
 				4FB9A98921BEEA6C00CF1CE4 /* Model */,
 				4FB9A98721BEEA5E00CF1CE4 /* Views */,
 				4FB9A96B21BBF3C500CF1CE4 /* MyDownloadManger */,
@@ -129,7 +130,6 @@
 		4FB9A98721BEEA5E00CF1CE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4FB9A95B21BBF14D00CF1CE4 /* BoardViewController.swift */,
 				4FB9A98521BEE9AA00CF1CE4 /* BoardComponentCell.swift */,
 				4FB9A98C21BF622000CF1CE4 /* BoardCollectionCustomLayout.swift */,
 			);
@@ -142,6 +142,14 @@
 				4FB9A98A21BEEA8800CF1CE4 /* BoardComponent.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4FB9A98E21BF6CC800CF1CE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9A95B21BBF14D00CF1CE4 /* BoardViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

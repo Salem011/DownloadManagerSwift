@@ -20,14 +20,13 @@ class BoardComponentCell: UICollectionViewCell {
         componentActivityIndicator.isHidden = true
     }
     
-    
     func showIndicator () {
-        cell.componentActivityIndicator.isHidden = false
-        cell.componentActivityIndicator.startAnimating ()
+        componentActivityIndicator.isHidden = false
+        componentActivityIndicator.startAnimating ()
     }
     
     func hideIndicator () {
-        cell.componentActivityIndicator.isHidden = true
-        cell.componentActivityIndicator.stopAnimating ()
+        componentActivityIndicator.isHidden = true
+        componentActivityIndicator.stopAnimating ()
     }
 }
