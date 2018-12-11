@@ -23,7 +23,11 @@ class BoardViewController: UIViewController {
         let boardLayout = BoardCollectionCustomLayout()
         boardLayout.delegate = self
         boardCollectionView.collectionViewLayout = boardLayout
-        retrieveBoardComponents()
+        
+        boardCollectionView.addInfiniteScroll { (collectionView) in
+            self.retrieveBoardComponents()
+        }
+        boardCollectionView.beginInfiniteScroll(false)
     }
     
     // MARK: - View Support Functions
@@ -39,6 +43,7 @@ class BoardViewController: UIViewController {
             self.components = boardComponents
             DispatchQueue.main.async {
                 self.boardCollectionView.reloadData()
+                self.boardCollectionView.finishInfiniteScroll()
             }
         }
     }
