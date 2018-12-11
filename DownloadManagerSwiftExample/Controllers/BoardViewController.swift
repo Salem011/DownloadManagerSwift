@@ -11,6 +11,7 @@ import DownloadManagerSwift
 
 class BoardViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var boardCollectionView: UICollectionView!
     
     var components = [BoardComponent]()
@@ -28,11 +29,17 @@ class BoardViewController: UIViewController {
             self.retrieveBoardComponents()
         }
         boardCollectionView.beginInfiniteScroll(false)
+        activityIndicator.startAnimating()
     }
     
     // MARK: - View Support Functions
     func retrieveBoardComponents () {
         apiService.loadBoardComponents { (boardComponents, error) in
+            
+            DispatchQueue.main.async {
+                self.hideLoadingIndicator()
+            }
+            
             if let errorMessage = error?.localizedDescription {
                 DispatchQueue.main.async {
                     self.displayErrorAlert(withMessage: errorMessage)
@@ -46,6 +53,11 @@ class BoardViewController: UIViewController {
                 self.boardCollectionView.finishInfiniteScroll()
             }
         }
+    }
+
+    func hideLoadingIndicator () {
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
     }
     
     func displayErrorAlert(withMessage message: String) {
